@@ -16,7 +16,7 @@ const Orders = ({token}) => {
       }
 
       try {
-        const response=await axios.post("http://localhost:4000/api/order/list",{},{headers:{token}})
+        const response=await axios.post(backendUrl+"/api/order/list",{},{headers:{token}})
         console.log(response.data);
         
         if(response.data.success){
