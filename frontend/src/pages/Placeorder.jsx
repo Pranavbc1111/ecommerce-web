@@ -6,10 +6,10 @@ import CartTotal from '../components/CartTotal'
 import { assets } from '../assets/frontend_assets/assets'
 import { ShopContext } from '../context/ShopContext'
 import { toast } from 'react-toastify'
-import { backendUrl } from '../../../admin/src/App'
+
 const Placeorder = () => {
   const [method,setMethod]=useState('cod');
-  const {navigate,token,cartItems,setCartItems,getCartAmount,delivery_fee,productsData,products}=useContext(ShopContext);
+  const {navigate,token,cartItems,setCartItems,getCartAmount,delivery_fee,productsData,products,backendUrl}=useContext(ShopContext);
   const [formData,setFormData]=useState({
     firstName:'',
     lastName:'',
