@@ -16,7 +16,7 @@ const Orders = ({token}) => {
       }
 
       try {
-        const response=await axios.post(backendUrl+"/api/order/list",{},{headers:{token}})
+        const response=await axios.post("https://ecommerce-backend-three-opal.vercel.app/api/order/list",{},{headers:{token}})
         console.log(response.data);
         
         if(response.data.success){
@@ -35,7 +35,7 @@ const Orders = ({token}) => {
 
   const statusHandler=async(event,orderId)=>{
     try {
-      const response=await axios.post(backendUrl+'/api/order/status',{orderId,status:event.target.value},{headers:{token}})
+      const response=await axios.post('https://ecommerce-backend-three-opal.vercel.app/api/order/status',{orderId,status:event.target.value},{headers:{token}})
       if(response.data.success){
         await fetchAllOrders()
       }
