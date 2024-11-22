@@ -55,7 +55,7 @@ const Placeorder = () => {
       switch(method){
         //api calls for cod
         case 'cod':{
-            const response=await axios.post("http://localhost:4000/api/order/place",orderData,{headers:{token}})
+            const response=await axios.post("https://ecommerce-backend-three-opal.vercel.app/api/order/place",orderData,{headers:{token}})
             console.log(response.data.success);
             
             if(response.data.success){
@@ -68,7 +68,7 @@ const Placeorder = () => {
             break;
         }
         case 'stripe':{
-            const responseStripe=await axios.post('http://localhost:4000/api/order/stripe',orderData,{headers:{token}})
+            const responseStripe=await axios.post('https://ecommerce-backend-three-opal.vercel.app/api/order/stripe',orderData,{headers:{token}})
             if(responseStripe.data.success){
               const {session_url}=responseStripe.data
               window.location.replace(session_url)
