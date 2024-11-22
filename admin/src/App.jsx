@@ -1,14 +1,14 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react'
-import Navbar from './components/navbar'
+import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import { Route, Routes } from 'react-router-dom'
-import List from './pages/list'
-import Orders from './pages/orders'
+import List from './pages/List'
+import Orders from './pages/Orders'
 import Login from './components/Login'
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Add from './pages/add'
+import Add from './pages/Add'
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const backendUrl=import.meta.env.VITE_BACKEND_URL
